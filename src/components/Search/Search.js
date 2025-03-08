@@ -4,13 +4,9 @@ import styles from "./Search.module.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const Search = ({ placeholder, data }) => {
+const Search = ({ placeholder, data = [] }) => {
   const [filteredData, setFilteredData] = useState(null);
   const [searchValue, setSearchValue] = useState("");
-
-  // useEffect(()=>{
-  //   setFilteredData(data);
-  // },[data])
 
   const onChangeHandler = (e) => {
     setSearchValue(e.target.value);
